@@ -1,0 +1,21 @@
+# Exported from Render on 2026-02-15T09:34:56Z
+version: "1"
+services:
+- type: web
+  name: 1.ExamNotesAI-1client
+  runtime: static
+  repo: https://github.com/utsav2311/1.ExamNotesAI
+  envVars:
+  - key: VITE_FIREBASE_APIKEY
+    sync: false
+  buildCommand: npm install; npm run build
+  staticPublishPath: ./dist
+  domains:
+  - utsavworld.in
+  - www.utsavworld.in
+  routes:
+  - type: rewrite
+    source: /*
+    destination: /index.html
+  autoDeployTrigger: commit
+  rootDir: client
