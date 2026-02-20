@@ -15,7 +15,7 @@ function PaymentSuccess() {
 
         const t = setTimeout(() => {
 
-            navigate("//")
+            navigate("/")
 
             
         }, 5000);
@@ -61,6 +61,7 @@ function PaymentSuccess() {
 }
 
 export default PaymentSuccess
+
 
 
 
